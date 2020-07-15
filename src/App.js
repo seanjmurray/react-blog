@@ -12,8 +12,9 @@ import './App.css';
 
 export default function App() {
   return (
-    <main>
+    <section>
       <Header />
+      <main>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/blog" component={Blog} />
@@ -22,8 +23,9 @@ export default function App() {
         <Route path="/about" component={About} />
         <Route component={Error} />
       </Switch>
-      <Footer />
     </main>
+      <Footer />
+    </section>
   );
 }
 

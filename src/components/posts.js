@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Markdown from 'react-markdown';
 
@@ -19,7 +20,7 @@ export default () => {
 }, [])
 const posts = data.map((obj,i) => {
   return (<div key={i}>
-    <h2>{obj.title}</h2>
+    <Link to={`/post/${obj._id}`} ><h2>{obj.title}</h2></Link>
     <h5>{obj.time}</h5>
     <Markdown source={obj.body}  escapeHtml={false} />
     <hr/>

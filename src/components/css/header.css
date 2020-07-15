@@ -1,19 +1,23 @@
 nav{
-  background-color: #222222;
+  background-color: #fff;
   height: 4em;
   line-height: 4em;
   text-align: center;
 }
 nav a{
-  color: #fff;
+  color: #222;
+  font-family: 'Major Mono Display', monospace;
   font-size: 1.5em;
   height: 100%;
   display: inline-block;
   text-decoration: none;
   width: 25%;
 }
+nav a:visited{
+  color:#222;
+}
 nav a:hover{
-  background-color: #ffffff;
-  color: #222222;
+  background-color: #222;
+  color: #fff;
   transition: ease-in 350ms;
 }
