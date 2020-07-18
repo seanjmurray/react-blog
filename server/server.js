@@ -33,7 +33,6 @@ app.get('/home', (req,res,next) => {
 
 //handles the post for inserting into the database
 app.post('/blog', (req,res,next) => {
-  console.log(THE_SECRET)
   if(req.body.post.sub === THE_SECRET){
     let newPost = new Post({
       title: req.body.post.title,
