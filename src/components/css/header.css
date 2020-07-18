@@ -1,5 +1,5 @@
 nav{
-  background-color: #fff;
+  background-color: rgb(242, 113, 0);
   height: 4em;
   line-height: 4em;
   text-align: center;
@@ -17,7 +17,7 @@ nav a:visited{
   color:#222;
 }
 nav a:hover{
-  background-color: #222;
+  background-color: #cc5500;
   color: #fff;
   transition: ease-in 350ms;
 }

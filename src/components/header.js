@@ -7,7 +7,6 @@ export default () => {
     <nav>
       <Link to="/">Home </Link>
       <Link to="/posts">Posts </Link>
-      <Link to="/blog">Compose </Link>
       <Link to="/about">About </Link>
     </nav>
   )

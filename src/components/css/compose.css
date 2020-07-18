@@ -1,5 +1,30 @@
 form{
-  width: 75%;
-  height: 50%;
+  width: 80%;
+  font-family: 'Montserrat';
+  display: inline-block;
   margin: auto;
+}
+.preview{
+  width: 75%;
+  display: inline-block;
+  margin: auto;
+}
+
+input{
+  width: 95%;
+  background-color: #111111;
+  color: #fff;
+  font-family: 'Montserrat';
+  margin: 1em, auto;
+  border: none;
+  padding: 1em;
+}
+textarea{
+  background-color: #111111;
+  color: #fff;
+  font-family: 'Montserrat';
+  width: 95%;
+  margin: auto;
+  border: none;
+  padding: 1em;
 }

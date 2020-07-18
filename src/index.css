@@ -10,6 +10,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 main{
+  height: 80%;
   width: 90%;
   margin: auto;
 }

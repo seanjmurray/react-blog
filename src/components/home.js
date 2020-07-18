@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import LoginButton from './login';
-import LogoutButton from './logout';
 import './css/home.css';
 
 export default () => {
@@ -31,8 +29,6 @@ const posts = data.map((obj,i) => {
  
   return(
     <section>
-    <LoginButton />
-       <LogoutButton /> 
       <div className="left">{posts}</div>
       <div className="right">
         <div className="r-top">right top</div>
