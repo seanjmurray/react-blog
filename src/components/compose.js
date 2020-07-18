@@ -3,11 +3,14 @@ import { Redirect } from "react-router-dom";
 import './css/compose.css';
 import axios from 'axios';
 import Markdown from 'react-markdown';
+import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react';
 
 const Compose =  () => {
   const [title, postTitle] = useState('');
   const [body, postBody] = useState('');
   const [posted, isPosted] = useState(false);
+  const { user } = useAuth0();
+  const { sub } = user;
   const postBlog = (event) => {
     event.preventDefault();
     console.log(event);
@@ -15,7 +18,7 @@ const Compose =  () => {
     method: 'POST',
     url: '/blog',
     data: {
-      post: {title,body}
+      post: {title,sub,body}
     }
   })
     isPosted(true);
@@ -38,4 +41,4 @@ return(
   </section>
   )
 }
-export default Compose;
+export default withAuthenticationRequired(Compose);

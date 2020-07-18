@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import LoginButton from './login';
+import LogoutButton from './logout';
 import './css/home.css';
 
 export default () => {
@@ -21,11 +23,16 @@ const posts = data.map((obj,i) => {
   <div key={i}>
     <h2>{obj.title}</h2>
     <h5>{obj.time}</h5>
-    <Link to={`/post/${obj._id}`} >Read more ...</Link>
+    <Link to={`/${obj.slug}`} >Read more ...</Link>
   </div>
   )}})
+
+   
+ 
   return(
     <section>
+    <LoginButton />
+       <LogoutButton /> 
       <div className="left">{posts}</div>
       <div className="right">
         <div className="r-top">right top</div>

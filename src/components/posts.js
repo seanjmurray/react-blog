@@ -20,7 +20,7 @@ export default () => {
 }, [])
 const posts = data.map((obj,i) => {
   return (<div key={i}>
-    <Link to={`/post/${obj._id}`} ><h2>{obj.title}</h2></Link>
+    <Link to={`/${obj.slug}`} ><h2>{obj.title}</h2></Link>
     <h5>{obj.time}</h5>
     <Markdown source={obj.body}  escapeHtml={false} />
     <hr/>

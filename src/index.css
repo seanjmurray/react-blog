@@ -23,6 +23,8 @@ pre{
   background-color: #444444;
   padding: 1em;
   border-radius: .5em;
+  width: 75%;
+  margin: auto;
 }
 a{
   color: #fff;

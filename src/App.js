@@ -8,7 +8,6 @@ import Post from './components/post';
 import About from './components/about';
 import Error from './components/error';
 import Footer from './components/footer';
-import './App.css';
 
 export default function App() {
   return (
@@ -19,8 +18,8 @@ export default function App() {
         <Route path="/" component={Home} exact />
         <Route path="/blog" component={Blog} />
         <Route path="/posts" component={Posts} />
-        <Route path="/post/:id" component={Post} />
         <Route path="/about" component={About} />
+        <Route path="/:slug" component={Post} />
         <Route component={Error} />
       </Switch>
     </main>
