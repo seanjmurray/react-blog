@@ -16,7 +16,6 @@ app.use(express.static(path.join(__dirname, "..", "build")));
 const postSchema = new mongoose.Schema({
   title: String,
   body: String,
-  user: String,
   slug: String,
   time: String
 })
@@ -37,7 +36,6 @@ app.post('/blog', (req,res,next) => {
     let newPost = new Post({
       title: req.body.post.title,
       body: req.body.post.body,
-      user: req.body.post.sub,
       slug: slugify(req.body.post.title.toLowerCase()),
       time: req._startTime.toString().slice(0,15)
     })
@@ -58,13 +56,17 @@ app.get('/post/:slug', (req,res,next) => {
 })
 // Deletes posts
 app.delete('/post/:id', (req,res,next) => {
-  Post.findByIdAndDelete(req.params.id)
+  if(req.body.user === THE_SECRET){
+    Post.findByIdAndDelete(req.params.id)
     .then(() => {
       res.status(200)
     }).catch(err => {
       console.error(err)
       res.status(500)
     })
+  } else{
+    res.status(403)
+  }
 })
 
 // sends react build directory to all other requests
@@ -78,3 +80,5 @@ mongoose.connect(dbURL, {useNewUrlParser: true, useUnifiedTopology: true })
     app.listen(PORT, () => console.log(`Server started on ${PORT}`));
   })
   .catch(err => console.error(err))
+
+  //I probably should separate these into separate files...

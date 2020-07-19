@@ -18,7 +18,7 @@ export default () => {
 const posts = data.map((obj,i) => {
   if(i < 5){
   return (
-  <div key={i}>
+  <div className="post" key={i}>
     <h2>{obj.title}</h2>
     <h5>{obj.time}</h5>
     <Link to={`/${obj.slug}`} >Read more ...</Link>
@@ -29,11 +29,7 @@ const posts = data.map((obj,i) => {
  
   return(
     <section>
-      <div className="left">{posts}</div>
-      <div className="right">
-        <div className="r-top">right top</div>
-        <div className="r-bottom">right bottom</div>
-      </div>
+      <div className="posts">{posts}</div>
     </section>
   )
 }

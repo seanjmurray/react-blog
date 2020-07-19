@@ -19,6 +19,8 @@ const Compose =  () => {
       post: {title,sub,body}
     }
   })
+  postTitle('')
+  postBody('')
 }
 
 return(

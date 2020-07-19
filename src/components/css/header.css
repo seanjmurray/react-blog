@@ -4,7 +4,7 @@ nav{
   line-height: 4em;
   text-align: center;
 }
-nav a{
+nav a, nav button{
   color: #222;
   font-family: 'Major Mono Display', monospace;
   font-size: 1.5em;
@@ -13,10 +13,14 @@ nav a{
   text-decoration: none;
   width: 25%;
 }
+nav button{
+  background-color: rgb(242, 113, 0);
+  border: none;
+}
 nav a:visited{
   color:#222;
 }
-nav a:hover{
+nav a:hover, nav button:hover{
   background-color: #cc5500;
   color: #fff;
   transition: ease-in 350ms;

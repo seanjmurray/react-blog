@@ -19,18 +19,18 @@ export default () => {
   fetchData();
 }, [])
 const posts = data.map((obj,i) => {
-  return (<div key={i}>
+  return (
+  <div className="post" key={i}>
     <Link to={`/${obj.slug}`} ><h2>{obj.title}</h2></Link>
     <h5>{obj.time}</h5>
     <Markdown source={obj.body}  escapeHtml={false} />
-    <hr/>
   </div>
   )})
   return(
     <section>
       {loading ? 
       <h1>Loading . . .</h1> :
-      <div>{posts}</div>
+      <div className="posts">{posts}</div>
       }
     </section>
   )
