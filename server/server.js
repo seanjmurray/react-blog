@@ -5,6 +5,7 @@ const app = express();
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const slugify = require('slugify');
+const { strict } = require('assert');
 const THE_SECRET = process.env.THE_SECRET;
 const dbURL = process.env.MONGODB_URI;
 const PORT = process.env.PORT;
@@ -19,9 +20,18 @@ const postSchema = new mongoose.Schema({
   slug: String,
   time: String
 })
+
 // Creating the model to use
 const Post = mongoose.model('Post', postSchema)
-
+// schema for comments in Mongo
+const commentSchema = new mongoose.Schema({
+  post_id: String,
+  comment: String,
+  posted_by: String,
+  picture: String,
+})
+//creating comment model
+const Comment = mongoose.model('Comment', commentSchema)
 //handles get requests for /home sends array of posts
 app.get('/home', (req,res,next) => {
   Post.find()
@@ -67,6 +77,27 @@ app.delete('/post/:id', (req,res,next) => {
   } else{
     res.status(403)
   }
+})
+// handles getting post comments
+app.get('/comment/:id', (req,res,next) => {
+  Comment.find({post_id: req.params.id})
+  .then(dbData => {
+    res.send(dbData)
+  })
+})
+//handles posting comments
+app.post('/comment/:id', (req,res,next) => {
+  console.log(req.body.data)
+  let newComment = new Comment({
+    post_id: req.body.data.post_id,
+    comment: req.body.data.comment,
+    posted_by: req.body.data.posted_by,
+    picture: req.body.data.picture,
+  })
+  newComment.save()
+  .then(() => res.status(200))
+  .catch(err => console.error(err))
+
 })
 
 // sends react build directory to all other requests

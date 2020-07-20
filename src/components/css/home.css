@@ -1,7 +1,31 @@
+.posts{
+  width: 70%;
+  order: 0;
+}
+.featured{
+  width: 25%;
+  order: 1;
+}
+@media only screen and (max-width: 500px){
+  .posts{
+    width: 100%;
+    order: 1;
+  }
+  .featured{
+    width: 100%;
+    order: 0;
+  }
+
+}
+article{
+  background-color: #111111;
+  border-radius: 1em;
+}
+
 .post{
   padding: 1em;
   border-radius: 1em;
 }
-.post:nth-child(even){
+.posts .post:nth-child(even){
 background-color: #111111;
 }

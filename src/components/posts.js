@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import Markdown from 'react-markdown';
-
+import './css/posts.css';
 
 export default () => {
   const [loading, isLoading] = useState(false)
@@ -30,7 +30,7 @@ const posts = data.map((obj,i) => {
     <section>
       {loading ? 
       <h1>Loading . . .</h1> :
-      <div className="posts">{posts}</div>
+      <div className="posts-page">{posts}</div>
       }
     </section>
   )

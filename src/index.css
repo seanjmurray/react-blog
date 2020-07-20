@@ -38,3 +38,10 @@ a:hover{
 a:visited{
   color: #ff6600;
 }
+
+.flex{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

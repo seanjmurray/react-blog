@@ -1,0 +1,13 @@
+.posts-page{
+  width: 100%
+}
+.posts-page .post{
+  width: 100%;
+}
+.post{
+  padding: 1em;
+  border-radius: 1em;
+}
+.post:nth-child(even){
+background-color: #111111;
+}

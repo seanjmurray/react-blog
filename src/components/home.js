@@ -28,8 +28,17 @@ const posts = data.map((obj,i) => {
    
  
   return(
-    <section>
-      <div className="posts">{posts}</div>
+    <section className="flex">
+      <div className="posts">
+        <h3>Recent Posts</h3>
+        {posts}
+        </div>
+        <div className="featured">
+          <h3>Featured</h3>
+          <article>
+            {posts[0]}
+          </article>
+        </div>
     </section>
   )
 }

@@ -1,0 +1,28 @@
+.comment-section{
+  background-color: #111111;
+  border-radius: 1em;
+  width: 80%;
+  margin: auto;
+  padding: 1em;
+}
+
+.comment-form button{
+  padding: 0 2em;
+  display: inline-block;
+}
+
+.comment{
+  background-color: #222222;
+  display: flex;
+  border-radius: 1em;
+  width: 75%;
+  margin: 1em auto;
+}
+.profile{
+  width: 50px;
+  height: 50px;
+  margin: 1em;
+}
+.comment p{
+  display: inline-block;
+}
