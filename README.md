@@ -1,36 +1,71 @@
-[![Build Status](https://travis-ci.com/seanjmurray/React-blog-client.svg?branch=master)](https://travis-ci.com/seanjmurray/React-blog-client)
+## React-Blog
+[![HitCount](http://hits.dwyl.com/seanjmurray/react-blog.svg)](http://hits.dwyl.com/seanjmurray/react-blog)
+[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
+[![Build Status](https://travis-ci.com/seanjmurray/portfolio.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dependencies
 
-## Available Scripts
+### Frontend 
+  - @auth0/auth0-react: ^1.0.0
+  - @testing-library/jest-dom: ^4.2.4
+  - @testing-library/react: ^9.5.0
+  - @testing-library/user-event: ^7.2.1
+  - axios: ^0.19.2
+  - react: ^16.13.1
+  - react-dom: ^16.13.1
+  - react-markdown: ^4.3.1
+  - react-router-dom: ^5.2.0
+  - react-scripts: 3.4.1
+### Backend
+  - dotenv: ^8.2.0
+  - express: ^4.17.1
+  - mongoose: ^5.9.23
+  - morgan: ^1.10.0
+  - slugify: ^1.4.4
 
-In the project directory, you can run:
+### API's
+ - [Auth0](https://auth0.com/)
+    
+## Installation
 
-### `npm start`
+To get started with this app clone the repo and from the root Directory run:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+$ npm i
+$ cd server
+$ npm i
+$ cd ..
+$ touch .env
+``` 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+while in the development environment use
 
-### `npm test`
+```
+$ npm start
+```
+
+This will start the server and build the React app. Be aware that you will not be able to see live updates.
+
+## Dev Notes
+
+### Build and Deployment
+The repository is currently set to be hosted at the / route of its URL.  Also I have environmental variables so authentication will not work.
+
+### Available Scripts 
+  
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It correctly bundles React in production mode and optimizes the build for the best performance. This also runs `npm i` for the server's package.
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+#### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -38,34 +73,16 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Changelog
+ - 2020-07-13 V 0.1 Project started basic functionality added
+ - 2020-07-13 V 0.3 Deployed and update build command
+ - 2020-07-15 V 0.4 Update styling and began working on CRUD
+ - 2020-07-17 V 0.5 Add Auth using Auth0
+ - 2020-07-18 V 0.6 Add Admin route 
+ - 2020-07-19 V 1.0 Add comments fully deploy 
+ 
+## Credits
 
-## Learn More
+### Coded and designed by Sean Murray
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

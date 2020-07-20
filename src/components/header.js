@@ -12,7 +12,7 @@ export default () => {
     <nav>
       <Link to="/">Home </Link>
       <Link to="/posts">Posts </Link>
-      <Link to="/about">About </Link>
+      {/* <Link to="/about">About </Link> */}
        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
     </nav>
   )
