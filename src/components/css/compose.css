@@ -1,7 +1,6 @@
 form{
   width: 80%;
   font-family: 'Montserrat';
-  display: inline-block;
   margin: auto;
 }
 .preview{
@@ -11,15 +10,17 @@ form{
 }
 
 input{
+  display: block;
   width: 95%;
   background-color: #111111;
   color: #fff;
   font-family: 'Montserrat';
-  margin: 1em, auto;
+  margin: auto;
   border: none;
   padding: 1em;
 }
 textarea{
+  display: block;
   background-color: #111111;
   color: #fff;
   font-family: 'Montserrat';

@@ -1,11 +1,12 @@
-import React from 'react';
-import './css/footer.css';
+import React from 'react'
+import './css/footer.css'
 
-
-export default () => {
-  return(
+const Footer = () => {
+  return (
     <footer>
       <p>&copy; 2020 Sean Murray</p>
     </footer>
   )
 }
+
+export default Footer

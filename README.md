@@ -1,7 +1,6 @@
 ## React-Blog
-[![HitCount](http://hits.dwyl.com/seanjmurray/react-blog.svg)](http://hits.dwyl.com/seanjmurray/react-blog)
 [![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
-[![Build Status](https://travis-ci.com/seanjmurray/portfolio.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
+[![Build Status](https://travis-ci.com/seanjmurray/react-blog.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
 ## Dependencies
@@ -53,7 +52,11 @@ This will start the server and build the React app. Be aware that you will not b
 The repository is currently set to be hosted at the / route of its URL.  Also I have environmental variables so authentication will not work.
 
 ### Available Scripts 
-  
+
+#### `npm run lint`
+
+Runs eslint checks on the src .js files. Linter follows recommended rules and uses react plugin.
+
 #### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
@@ -79,7 +82,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-07-15 V 0.4 Update styling and began working on CRUD
  - 2020-07-17 V 0.5 Add Auth using Auth0
  - 2020-07-18 V 0.6 Add Admin route 
- - 2020-07-19 V 1.0 Add comments fully deploy 
+ - 2020-07-19 V 1.0 Add comments fully deploy
+ - 2020-07-24 V 1.1 Change fonts, add eslint and travis ci, start to work on refactoring
  
 ## Credits
 

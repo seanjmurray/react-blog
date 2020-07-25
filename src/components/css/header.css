@@ -6,7 +6,7 @@ nav{
 }
 nav a, nav button{
   color: #222;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Roboto';
   font-size: 1.5em;
   height: 100%;
   display: inline-block;

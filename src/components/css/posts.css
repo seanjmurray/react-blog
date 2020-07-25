@@ -9,5 +9,5 @@
   border-radius: 1em;
 }
 .post:nth-child(even){
-background-color: #111111;
+background-color: #222;
 }
