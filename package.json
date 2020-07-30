@@ -19,7 +19,7 @@
     "start": "react-scripts build && (cd server && npm start)",
     "build": "react-scripts build && (cd server && npm i)",
     "test": "react-scripts test",
-    "lint": "eslint src/**/*.js --fix",
+    "lint": "eslint src/**/*.js && (cd server && eslint server.js)",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

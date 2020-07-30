@@ -90,7 +90,7 @@ app.post('/comment/:id', (req, res, next) => {
     post_id: req.body.data.post_id,
     comment: req.body.data.comment,
     posted_by: req.body.data.posted_by,
-    picture: req.body.data.picture,
+    picture: req.body.data.picture
   })
   newComment.save()
     .then(() => res.status(200))
