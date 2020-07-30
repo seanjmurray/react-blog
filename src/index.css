@@ -2,9 +2,6 @@ body {
   background-color: #111;
   color: #fff;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Montserrat', sans-serif;
@@ -15,7 +12,11 @@ main{
   margin: auto;
 }
 h1, h2,h3,h4,h5,h6{
-  font-family: 'Roboto';
+  font-family: 'Montserrat';
+  color: #ff6600;
+}
+h5{
+  color: #fff;
 }
 code{
   font-family: 'Roboto Mono', monospace;

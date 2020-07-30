@@ -12,7 +12,7 @@ const Header = () => {
     <nav>
       <Link to="/">Home </Link>
       <Link to="/posts">Posts </Link>
-      {/* <Link to="/about">About </Link> */}
+      <a href="https://www.seanjmurray.tech">Portfolio </a>
       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
     </nav>
   )

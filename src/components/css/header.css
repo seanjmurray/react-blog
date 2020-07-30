@@ -1,12 +1,12 @@
 nav{
-  background-color: rgb(242, 113, 0);
+  background-color: #222222;
   height: 4em;
   line-height: 4em;
   text-align: center;
 }
 nav a, nav button{
-  color: #222;
-  font-family: 'Roboto';
+  color: #fff;
+  font-family: 'Montserrat';
   font-size: 1.5em;
   height: 100%;
   display: inline-block;
@@ -14,14 +14,14 @@ nav a, nav button{
   width: 25%;
 }
 nav button{
-  background-color: rgb(242, 113, 0);
+  background-color: #222222;
   border: none;
 }
 nav a:visited{
-  color:#222;
+  color:#fff;
 }
 nav a:hover, nav button:hover{
-  background-color: #cc5500;
-  color: #fff;
+  background-color: #fff;
+  color: #222;
   transition: ease-in 350ms;
 }

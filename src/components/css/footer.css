@@ -1,7 +1,13 @@
 footer{
   height: 4em;
-  background-color: rgb(242, 113, 0);
-  color: #222;
+  background-color: #222222;
+  color: #666666;
   line-height: 4em;
   text-align: center;
+}
+footer a{
+	color: #fff;
+}
+footer a:visited{
+	color: #fff;
 }
