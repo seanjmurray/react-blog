@@ -12,6 +12,7 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, '..', 'build')))
+mongoose.set('useFindAndModify', false)
 // schema for posts in MongoDB
 const postSchema = new mongoose.Schema({
   title: String,
@@ -75,6 +76,24 @@ app.delete('/post/:id', (req, res, next) => {
       })
   } else {
     res.status(403)
+  }
+})
+app.patch('/post/:id', (req, res, next) => {
+  if (req.body.user === THE_SECRET) {
+    Post.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        title: req.body.title,
+        body: req.body.body
+      }
+    )
+      .then(() => {
+        res.status(200)
+      })
+      .catch(err => {
+        console.error(err)
+        res.status(500)
+      })
   }
 })
 // handles getting post comments

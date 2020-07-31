@@ -5,6 +5,7 @@ import Home from './components/home'
 import Posts from './components/posts'
 import Post from './components/post'
 import Admin from './components/admin'
+import EditPost from './components/editpost'
 import Error from './components/error'
 import Footer from './components/footer'
 
@@ -17,6 +18,7 @@ export default function App () {
           <Route path="/" component={Home} exact />
           <Route path="/posts" component={Posts} />
           <Route path="/admin" component={Admin} />
+          <Route path="/edit/:slug" component={EditPost} />
           <Route path="/blog/:slug" component={Post} />
           <Route component={Error} />
         </Switch>

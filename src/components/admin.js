@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import axios from 'axios'
 import { useAuth0 } from '@auth0/auth0-react'
 import DeleteButton from './deletepost'
@@ -23,7 +23,7 @@ const Admin = () => {
         ? <div className="post">
           <h3>{post.title}</h3>
           <DeleteButton post_id={post._id} />
-          <button>Edit Post</button>
+          <Link to={`/edit/${post.slug}`}>Edit Post</Link>
         </div>
         : null
     )

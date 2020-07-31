@@ -1,5 +1,5 @@
 ## React-Blog
-[![Version](https://img.shields.io/badge/version-1.0.4-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
+[![Version](https://img.shields.io/badge/version-1.0.5-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
 [![Build Status](https://travis-ci.com/seanjmurray/react-blog.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
@@ -87,6 +87,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-07-29 V 1.0.2 Change colors and fonts add link to portfolio
  - 2020-07-30 V 1.0.3 Fixed height of main sections, add substring to featured post on home page, Add very basic test
  - 2020-07-30 V 1.0.4 Fixed routing issues and switch, fix sorting on server /home route
+ - 2020-07-31 V 1.0.5 Add ability to update posts from admin route, server update to V 1.0.2
  
 ## Credits
 
