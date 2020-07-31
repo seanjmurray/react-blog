@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import Markdown from 'react-markdown'
 import { useAuth0 } from '@auth0/auth0-react'
 
 const EditPost = (props) => {
@@ -39,18 +40,21 @@ const EditPost = (props) => {
       return <h1>Loading</h1>
     } else {
       return user.user.sub === process.env.REACT_APP_SUB
-        ? <div>
-          <form onSubmit={postEdits}>
-            <input type="text" value={title} onChange={e => editTitle(e.target.value)} />
-            <textarea placeholder="Post Body" rows="60" name="body" value={body} onChange={e => editBody(e.target.value)} ></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+        ? <h1>Edit Post</h1>
         : <Redirect to="/" />
     }
   }
   return (
-    <ItsMe />
+    <section>
+      <ItsMe />
+      <form onSubmit={postEdits}>
+        <input type="text" name="title" value={title} onChange={event => editTitle(event.target.value)} />
+        <textarea rows="60" name="body" value={body} onChange={event => editBody(event.target.value)} ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <h2>Preview</h2>
+      <Markdown source={body} />
+    </section>
   )
 }
 
