@@ -1,6 +1,6 @@
 {
   "name": "react-blog-client",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
@@ -18,7 +18,7 @@
     "start-client": "react-scripts start",
     "start": "react-scripts build && (cd server && npm start)",
     "build": "react-scripts build && (cd server && npm i)",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "lint": "eslint src/**/*.js && (cd server && eslint server.js)",
     "eject": "react-scripts eject"
   },

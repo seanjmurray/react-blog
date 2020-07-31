@@ -21,14 +21,14 @@ const Posts = () => {
   const posts = data.map((obj, i) => {
     return (
       <div className="post" key={i}>
-        <Link to={`/blog/${obj.slug}`} ><h2>{obj.title}</h2></Link>
+        <Link to={`/blog/${obj.slug}`} ><h3>{obj.title}</h3></Link>
         <h5>{obj.time}</h5>
         <Markdown source={obj.body} escapeHtml={false} />
       </div>
     )
   })
   return (
-    <section>
+    <section className="main">
       {loading
         ? <h1>Loading . . .</h1>
         : <div className="posts-page">{posts}</div>

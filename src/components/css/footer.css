@@ -1,8 +1,8 @@
 footer{
-  height: 4em;
+  height: 10vh;
   background-color: #222222;
   color: #666666;
-  line-height: 4em;
+  line-height: 10vh;
   text-align: center;
 }
 footer a{

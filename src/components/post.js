@@ -51,7 +51,7 @@ const Post = (props) => {
     isComment('')
   }
   return (
-    <section>
+    <section className="main">
       {loading
         ? <h1>Loading . . .</h1>
         : <div>

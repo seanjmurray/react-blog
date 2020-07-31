@@ -15,7 +15,7 @@ h1, h2,h3,h4,h5,h6{
   font-family: 'Montserrat';
   color: #ff6600;
 }
-h5{
+h3, h5{
   color: #fff;
 }
 code{
@@ -45,4 +45,8 @@ a:visited{
   align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+.main{
+  min-height: 80vh;
+  
 }

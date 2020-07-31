@@ -1,7 +1,7 @@
 nav{
   background-color: #222222;
-  height: 4em;
-  line-height: 4em;
+  height: 10vh;
+  line-height: 10vh;
   text-align: center;
 }
 nav a, nav button{

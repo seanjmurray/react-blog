@@ -19,7 +19,7 @@ const posts = data.map((obj,i) => {
     if (i < 5) {
       return (
         <div className="post" key={i}>
-          <h2>{obj.title}</h2>
+          <h3>{obj.title}</h3>
           <h5>{obj.time}</h5>
           <Link to={`/blog/${obj.slug}`} >Read more ...</Link>
         </div>
@@ -27,17 +27,28 @@ const posts = data.map((obj,i) => {
     }
   })
 
+  const Featured = () => {
+    return (
+      <article>
+        <h3>{data[0].title}</h3>
+        <p>{data[0].body.substring(0,255)}. . .</p>
+        <Link to={`/blog/${data[0].slug}`} >Read more ...</Link>
+      </article>
+    )
+  }
+
   return (
-    <section className="flex">
+    <section className="flex main">
       <div className="posts">
-        <h3>Recent Posts</h3>
+        <h2>Recent Posts</h2>
         {posts}
       </div>
       <div className="featured">
-        <h3>Featured</h3>
-        <article>
-          {posts[0]}
-        </article>
+        <h2>Featured</h2>
+        {data.length > 0 ?
+          <Featured /> :
+          null
+        }
       </div>
     </section>
   )

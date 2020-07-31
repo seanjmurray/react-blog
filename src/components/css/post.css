@@ -5,9 +5,22 @@
   margin: auto;
   padding: 1em;
 }
+.comment-section textarea{
+  width: 100%;
+  border-radius: .5em;
+}
 
 .comment-form button{
-  padding: 0 2em;
+  padding: .5em 2em;
+  border: none;
+  border-radius: .5em;
+  background-color: #111111;
+  color: #fff;
+  margin: .5em;
+}
+.comment-form button:hover{
+  background-color: #ff6600;
+  color: #222222;
 }
 
 .comment{
