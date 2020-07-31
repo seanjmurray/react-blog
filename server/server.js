@@ -33,9 +33,9 @@ const commentSchema = new mongoose.Schema({
 const Comment = mongoose.model('Comment', commentSchema)
 // handles get requests for /home sends array of posts
 app.get('/home', (req, res, next) => {
-  Post.find()
+  Post.find({}).sort({ time: 'desc' })
     .then(dbData => {
-      res.send(dbData.reverse())
+      res.send(dbData)
     })
 })
 

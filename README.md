@@ -86,7 +86,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-07-24 V 1.0.1 Change fonts, add eslint and travis ci, start to work on refactoring
  - 2020-07-29 V 1.0.2 Change colors and fonts add link to portfolio
  - 2020-07-30 V 1.0.3 Fixed height of main sections, add substring to featured post on home page, Add very basic test
- - 2020-07-30 V 1.0.4 Fixed routing issues and switch
+ - 2020-07-30 V 1.0.4 Fixed routing issues and switch, fix sorting on server /home route
  
 ## Credits
 
