@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, BrowserRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Header from './components/header'
 import Home from './components/home'
 import Posts from './components/posts'
@@ -13,15 +13,21 @@ export default function App () {
     <section>
       <Header />
       <main>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/posts" component={Posts} />
-            <Route path="/admin" component={Admin} />
-            <Route path="/blog/:slug" component={Post} />
-            <Route component={Error} />
-          </Switch>
-        </ BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/posts">
+            <Posts />
+          </Route>
+          <Route path="/admin">
+            <Admin />
+          </Route>
+          <Route path="/blog/:slug">
+            <Post />
+          </Route>
+          <Route component={Error} />
+        </Switch>
       </main>
       <Footer />
     </section>
