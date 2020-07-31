@@ -31,7 +31,7 @@ const posts = data.map((obj,i) => {
     return (
       <article>
         <h3>{data[0].title}</h3>
-        <p>{data[0].body.substring(0,255)}. . .</p>
+        <p>{data[0].body.substring(0, 255)}. . .</p>
         <Link to={`/blog/${data[0].slug}`} >Read more ...</Link>
       </article>
     )
@@ -45,9 +45,9 @@ const posts = data.map((obj,i) => {
       </div>
       <div className="featured">
         <h2>Featured</h2>
-        {data.length > 0 ?
-          <Featured /> :
-          null
+        {data.length > 0
+          ? <Featured />
+          : null
         }
       </div>
     </section>

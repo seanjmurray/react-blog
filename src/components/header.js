@@ -10,12 +10,12 @@ const Header = () => {
 
   return (
     <nav>
-    	<BrowserRouter>
-	      <Link to="/">Home </Link>
-	      <Link to="/posts">Posts </Link>
-	      <a href="https://www.seanjmurray.tech">Portfolio </a>
-	      {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-	    </BrowserRouter>
+      <BrowserRouter>
+        <Link to="/">Home </Link>
+        <Link to="/posts">Posts </Link>
+        <a href="https://www.seanjmurray.tech">Portfolio </a>
+        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+      </BrowserRouter>
     </nav>
   )
 }
