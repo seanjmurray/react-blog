@@ -1,6 +1,6 @@
 {
   "name": "react-blog-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",

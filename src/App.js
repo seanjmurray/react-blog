@@ -14,18 +14,10 @@ export default function App () {
       <Header />
       <main>
         <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/posts">
-            <Posts />
-          </Route>
-          <Route path="/admin">
-            <Admin />
-          </Route>
-          <Route path="/blog/:slug">
-            <Post />
-          </Route>
+          <Route path="/" component={Home} exact />
+          <Route path="/posts" component={Posts} />
+          <Route path="/admin" component={Admin} />
+          <Route path="/blog/:slug" component={Post} />
           <Route component={Error} />
         </Switch>
       </main>
