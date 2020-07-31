@@ -35,7 +35,7 @@ const Comment = mongoose.model('Comment', commentSchema)
 app.get('/home', (req, res, next) => {
   Post.find({}).sort({ time: 'desc' })
     .then(dbData => {
-      res.send(dbData)
+      res.send(dbData.reverse())
     })
 })
 
