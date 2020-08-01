@@ -1,5 +1,5 @@
 ## React-Blog
-[![Version](https://img.shields.io/badge/version-1.3.6-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
+[![Version](https://img.shields.io/badge/version-1.3.7-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
 [![Build Status](https://travis-ci.com/seanjmurray/react-blog.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
@@ -16,6 +16,9 @@
   - react-markdown: ^4.3.1
   - react-router-dom: ^5.2.0
   - react-scripts: 3.4.1
+  - moment: ^2.27.0
+  - react-moment: ^0.9.7
+
 ### Backend
   - dotenv: ^8.2.0
   - express: ^4.17.1
@@ -87,8 +90,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-07-29 V 1.1.2 Change colors and fonts add link to portfolio
  - 2020-07-30 V 1.2.3 Fixed height of main sections, add substring to featured post on home page, Add very basic test
  - 2020-07-30 V 1.2.4 Fixed routing issues and switch, fix sorting on server /home route
- - 2020-07-31 V 1.2.5 
+ - 2020-07-31 V 1.3.5 Add ability to update posts via admin page
  - 2020-08-01 V 1.3.6 fixed great date issue
+ - 2020-08-01 V 1.3.7 Add moment to format date objects, start refactoring components
+
  
 ## Credits
 

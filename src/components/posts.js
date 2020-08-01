@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Moment from 'react-moment'
 import axios from 'axios'
 import Markdown from 'react-markdown'
 import './css/posts.css'
@@ -22,7 +23,7 @@ const Posts = () => {
     return (
       <div className="post" key={i}>
         <Link to={`/blog/${obj.slug}`} ><h3>{obj.title}</h3></Link>
-        <h5>{obj.time.toString().slice(0, 10)}</h5>
+        <Moment format="LL" date={obj.time} />
         <Markdown source={obj.body} escapeHtml={false} />
       </div>
     )
