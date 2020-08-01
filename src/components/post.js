@@ -58,7 +58,7 @@ const Post = (props) => {
 
           <div>
             <h1>{data.title}</h1>
-            <h4>Posted on: {data.time}</h4>
+            <h4>Posted on: {data.time.toString().slice(0, 10)}</h4>
             <Markdown source={data.body} escapeHtml={false} />
           </div>
           {user.isAuthenticated

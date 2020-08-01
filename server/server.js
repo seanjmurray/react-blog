@@ -18,7 +18,7 @@ const postSchema = new mongoose.Schema({
   title: String,
   body: String,
   slug: String,
-  time: String
+  time: Date
 })
 
 // Creating the model to use
@@ -34,9 +34,9 @@ const commentSchema = new mongoose.Schema({
 const Comment = mongoose.model('Comment', commentSchema)
 // handles get requests for /home sends array of posts
 app.get('/home', (req, res, next) => {
-  Post.find({}).sort({ time: 'desc' })
+  Post.find({}).sort({ time: -1 })
     .then(dbData => {
-      res.send(dbData.reverse())
+      res.send(dbData)
     })
 })
 
@@ -47,7 +47,7 @@ app.post('/blog', (req, res, next) => {
       title: req.body.post.title,
       body: req.body.post.body,
       slug: slugify(req.body.post.title.toLowerCase()),
-      time: req._startTime.toString().slice(0, 15)
+      time: new Date()
     })
     newPost.save()
       .then(() => res.status(200))

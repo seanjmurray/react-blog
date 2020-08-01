@@ -22,7 +22,7 @@ const Posts = () => {
     return (
       <div className="post" key={i}>
         <Link to={`/blog/${obj.slug}`} ><h3>{obj.title}</h3></Link>
-        <h5>{obj.time}</h5>
+        <h5>{obj.time.toString().slice(0, 10)}</h5>
         <Markdown source={obj.body} escapeHtml={false} />
       </div>
     )

@@ -20,7 +20,7 @@ const posts = data.map((obj,i) => {
       return (
         <div className="post" key={i}>
           <h3>{obj.title}</h3>
-          <h5>{obj.time}</h5>
+          <h5>{obj.time.toString().slice(0, 10)}</h5>
           <Link to={`/blog/${obj.slug}`} >Read more ...</Link>
         </div>
       )
