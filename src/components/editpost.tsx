@@ -5,13 +5,20 @@ import axios from 'axios'
 import Markdown from 'react-markdown'
 import { useAuth0 } from '@auth0/auth0-react'
 
-const EditPost = (props) => {
+type Props = {
+  match: {
+    params: {
+      slug: string
+    }
+  }
+}
+const EditPost = ( match: Props) => {
   const user = useAuth0()
   const [title, editTitle] = useState('')
   const [body, editBody] = useState('')
-  const [post, editPost] = useState({})
+  const [post, editPost] = useState<{_id?: string}>({})
   useEffect(() => {
-    const { match: { params } } = props
+    const { match: { params } } = match
     const fetchData = () => {
       axios(`/post/${params.slug}`)
         .then(dbData => {
@@ -23,8 +30,8 @@ const EditPost = (props) => {
     fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  const postEdits = (event) => {
-    event.preventDefault()
+  const postEdits = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     axios({
       method: 'patch',
       url: `/post/${post._id}`,
@@ -49,7 +56,7 @@ const EditPost = (props) => {
       <ItsMe />
       <form onSubmit={postEdits}>
         <input type="text" name="title" value={title} onChange={event => editTitle(event.target.value)} />
-        <textarea rows="60" name="body" value={body} onChange={event => editBody(event.target.value)} ></textarea>
+        <textarea rows={60} name="body" value={body} onChange={event => editBody(event.target.value)} ></textarea>
         <button type="submit">Submit</button>
       </form>
       <h2>Preview</h2>

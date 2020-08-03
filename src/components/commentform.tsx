@@ -1,20 +1,25 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import PropTypes from 'prop-types'
+import { User } from '@auth0/auth0-react/dist/auth-state'
 
-const CommentForm = (props) => {
+type Props = {
+  post: {
+    _id?: string
+  },
+  user: User
+}
+
+const CommentForm = ({ post, user }: Props) => {
   const [comment, isComment] = useState('')
 
-  const postComment = (e) => {
-    // e.preventDefault()
-    console.log(props.post)
-    console.log(props.user)
-    axios.post(`/comment/${props.post._id}`, {
+  const postComment = () => {
+    axios.post(`/comment/${post._id}`, {
       data: {
-        post_id: props.post._id,
+        post_id: post._id,
         comment: comment,
-        posted_by: props.user.user.sub,
-        picture: props.user.user.picture
+        posted_by: user.user.sub,
+        picture: user.user.picture
       }
     })
     isComment('')

@@ -8,13 +8,23 @@ import { useAuth0 } from '@auth0/auth0-react'
 import CommentSection from './commentsection'
 import './css/post.css'
 
-const Post = (props) => {
-  const [loading, isLoading] = useState(false)
-  const [data, setData] = useState({})
+type PostProps = {
+  match: {params: {slug: string}}
+}
+type data = {
+  _id?: string,
+  title?: string,
+  time?: Date,
+  body?: string
+  }
+
+const Post = (match: PostProps ) => {
+  const [loading, isLoading] = useState<boolean>(false)
+  const [data, setData] = useState<data>({})
   const user = useAuth0()
 
   useEffect(() => {
-    const { match: { params } } = props
+    const { match: { params } } = match
     isLoading(true)
     const fetchData = () => {
       axios(`/post/${params.slug}`)

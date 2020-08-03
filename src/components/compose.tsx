@@ -4,14 +4,15 @@ import axios from 'axios'
 import Markdown from 'react-markdown'
 import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react'
 
+
 const Compose = () => {
   const [title, postTitle] = useState('')
   const [body, postBody] = useState('')
   const { user } = useAuth0()
   const { sub } = user
-  const postBlog = (event) => {
-    event.preventDefault()
-    console.log(event)
+
+  const postBlog = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     axios({
       method: 'POST',
       url: '/blog',
@@ -27,7 +28,7 @@ const Compose = () => {
     <section>
       <form onSubmit={postBlog}>
         <input placeholder="Post Title" name="title" value={title} onChange={event => postTitle(event.target.value)} />
-        <textarea placeholder="Post Body" rows="60" name="body" value={body} onChange={event => postBody(event.target.value)} ></textarea>
+        <textarea placeholder="Post Body" rows={60} name="body" value={body} onChange={event => postBody(event.target.value)} ></textarea>
         <button type="submit">Submit</button>
       </form>
       <div className="preview">

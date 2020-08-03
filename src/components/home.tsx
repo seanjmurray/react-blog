@@ -4,6 +4,7 @@ import Feed from './feed'
 import Featured from './featured'
 import './css/home.css'
 
+
 const Home = () => {
   const [data, setData] = useState([])
   useEffect(() => {
