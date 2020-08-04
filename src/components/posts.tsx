@@ -14,7 +14,7 @@ type posts = {
     }[]
 }
 
-const Posts = () => {
+const Posts = (): JSX.Element => {
   const [loading, isLoading] = useState(false)
   const [posts, getPosts] = useState([])
   useEffect(() => {
@@ -28,7 +28,7 @@ const Posts = () => {
     }
     fetchData()
   }, [])
-  const BlogPosts = ({ arr }: posts) => {
+  const BlogPosts = ({ arr }: posts): JSX.Element => {
     const postArr = arr.map((obj, i) => {
       return (
         <div className="post" key={i}>
@@ -39,14 +39,14 @@ const Posts = () => {
       )
     })
     return <>{postArr}</>
-}
+  }
   return (
     <section className="main">
       {loading
         ? <h1>Loading . . .</h1>
         : <div className="posts-page">
           <BlogPosts arr={posts} />
-          </div>
+        </div>
       }
     </section>
   )

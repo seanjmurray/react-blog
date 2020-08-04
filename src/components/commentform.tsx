@@ -10,7 +10,7 @@ type Props = {
   user: User
 }
 
-const CommentForm = ({ post, user }: Props) => {
+const CommentForm = ({ post, user }: Props): JSX.Element => {
   const [comment, isComment] = useState('')
 
   const postComment = () => {

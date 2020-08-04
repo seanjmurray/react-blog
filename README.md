@@ -1,5 +1,5 @@
 ## React-Blog
-[![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
+[![Version](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
 [![Build Status](https://travis-ci.com/seanjmurray/react-blog.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
@@ -99,7 +99,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-07-31 V 1.3.5 Add ability to update posts via admin page
  - 2020-08-01 V 1.3.6 fixed great date issue
  - 2020-08-01 V 1.3.7 Add moment to format date objects, start refactoring components
- - 2020-08-03 V 2.0.0 Refactor into Typescript, V 2
+ - 2020-08-02 V 2.0.0 Refactor into Typescript, V 2
+ - 2020-08-03 V 2.0.1 Refactor admin to typescript
 
  
 ## Credits

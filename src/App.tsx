@@ -9,7 +9,7 @@ import EditPost from './components/editpost'
 import Error from './components/error'
 import Footer from './components/footer'
 
-export default function App () {
+export default function App (): JSX.Element {
   return (
     <section>
       <Header />

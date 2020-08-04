@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import axios from 'axios'
-import { useAuth0 } from '@auth0/auth0-react'
+import { User } from '@auth0/auth0-react/dist/auth-state'
 
 type Props = {
-  post_id: string
+  postId: string,
+  user: User
 }
 
-const DeleteButton = ({ post_id }: Props) => {
-  const { user } = useAuth0()
-  const { sub } = user
+const DeleteButton = ({ postId, user }: Props): JSX.Element => {
   const [deleted, isDeleted] = useState(false)
   const beGone = () => {
-    axios.delete(`/post/${post_id}`, {
+    console.log(user)
+    axios.delete(`/post/${postId}`, {
       data: {
-        user: sub
+        user: user.user.sub
       }
     })
     isDeleted(true)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Error = () => {
+const Error = (): JSX.Element => {
   return (
     <section>
       <h1>Error 404 not found</h1>

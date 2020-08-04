@@ -18,7 +18,7 @@ type data = {
   body?: string
   }
 
-const Post = (match: PostProps ) => {
+const Post = (match: PostProps): JSX.Element => {
   const [loading, isLoading] = useState<boolean>(false)
   const [data, setData] = useState<data>({})
   const user = useAuth0()

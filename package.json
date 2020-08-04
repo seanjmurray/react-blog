@@ -1,6 +1,6 @@
 {
   "name": "react-blog-client",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.0.0",
@@ -27,7 +27,7 @@
     "start": "react-scripts build && (cd server && npm start)",
     "build": "react-scripts build && (cd server && npm i)",
     "test": "react-scripts test --coverage",
-    "lint": "eslint src/**/*.js && (cd server && eslint server.js)",
+    "lint": "eslint src/**/*.tsx && (cd server && eslint server.js)",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,6 +46,8 @@
     ]
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^6.6.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",

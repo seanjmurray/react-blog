@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 require('dotenv').config()
 const path = require('path')
 const express = require('express')
@@ -33,7 +34,7 @@ const commentSchema = new mongoose.Schema({
 // creating comment model
 const Comment = mongoose.model('Comment', commentSchema)
 // handles get requests for /home sends array of posts
-app.get('/home', (req, res, next) => {
+app.get('/home', (req, res) => {
   Post.find({}).sort({ time: -1 })
     .then(dbData => {
       res.send(dbData)
@@ -41,7 +42,7 @@ app.get('/home', (req, res, next) => {
 })
 
 // handles the post for inserting into the database
-app.post('/blog', (req, res, next) => {
+app.post('/blog', (req, res) => {
   if (req.body.post.sub === THE_SECRET) {
     const newPost = new Post({
       title: req.body.post.title,
@@ -58,14 +59,14 @@ app.post('/blog', (req, res, next) => {
 })
 
 // Finds post by slug
-app.get('/post/:slug', (req, res, next) => {
+app.get('/post/:slug', (req, res) => {
   Post.findOne({ slug: req.params.slug })
     .then(dbData => {
       res.send(dbData)
     })
 })
 // Deletes posts
-app.delete('/post/:id', (req, res, next) => {
+app.delete('/post/:id', (req, res) => {
   if (req.body.user === THE_SECRET) {
     Post.findByIdAndDelete(req.params.id)
       .then(() => {
@@ -78,7 +79,7 @@ app.delete('/post/:id', (req, res, next) => {
     res.status(403)
   }
 })
-app.patch('/post/:id', (req, res, next) => {
+app.patch('/post/:id', (req, res) => {
   if (req.body.user === THE_SECRET) {
     Post.findOneAndUpdate(
       { _id: req.params.id },
@@ -97,14 +98,14 @@ app.patch('/post/:id', (req, res, next) => {
   }
 })
 // handles getting post comments
-app.get('/comment/:id', (req, res, next) => {
+app.get('/comment/:id', (req, res) => {
   Comment.find({ post_id: req.params.id })
     .then(dbData => {
       res.send(dbData)
     })
 })
 // handles posting comments
-app.post('/comment/:id', (req, res, next) => {
+app.post('/comment/:id', (req, res) => {
   const newComment = new Comment({
     post_id: req.body.data.post_id,
     comment: req.body.data.comment,
@@ -117,7 +118,7 @@ app.post('/comment/:id', (req, res, next) => {
 })
 
 // sends react build directory to all other requests
-app.use('*', (req, res, next) => {
+app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'build/index.html'))
 })
 

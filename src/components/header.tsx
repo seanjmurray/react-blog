@@ -5,7 +5,7 @@ import LoginButton from './login'
 import LogoutButton from './logout'
 import './css/header.css'
 
-const Header = () => {
+const Header = (): JSX.Element => {
   const { isAuthenticated } = useAuth0()
 
   return (

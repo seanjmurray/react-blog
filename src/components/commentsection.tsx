@@ -12,7 +12,7 @@ type Props = {
   user: User
 }
 
-const CommentSection = ({ post, user }: Props) => {
+const CommentSection = ({ post, user }: Props): JSX.Element => {
   const [comments, postComments] = useState([])
 
   useEffect(() => {

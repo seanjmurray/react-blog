@@ -6,7 +6,7 @@ type FeaturedProps = {
   post: {title: string, body: string, slug: string}[]
 }
 
-const Featured = ({ post }: FeaturedProps) => {
+const Featured = ({ post }: FeaturedProps): JSX.Element => {
   return (
     <article>
       <h3>{post[0].title}</h3>

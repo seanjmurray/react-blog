@@ -4,8 +4,7 @@ import Feed from './feed'
 import Featured from './featured'
 import './css/home.css'
 
-
-const Home = () => {
+const Home = (): JSX.Element => {
   const [data, setData] = useState([])
   useEffect(() => {
     const fetchData = () => {

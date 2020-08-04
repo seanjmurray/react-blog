@@ -8,7 +8,7 @@ type CommentProps = {
   }[]
 }
 
-const Comments = ({ comments }: CommentProps) => {
+const Comments = ({ comments }: CommentProps): JSX.Element => {
   const postComments = comments.map((obj, i) => {
     return (
       <div className="comment" key={i}>

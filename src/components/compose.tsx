@@ -4,8 +4,7 @@ import axios from 'axios'
 import Markdown from 'react-markdown'
 import { withAuthenticationRequired, useAuth0 } from '@auth0/auth0-react'
 
-
-const Compose = () => {
+const Compose = (): JSX.Element => {
   const [title, postTitle] = useState('')
   const [body, postBody] = useState('')
   const { user } = useAuth0()

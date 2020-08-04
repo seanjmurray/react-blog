@@ -12,7 +12,7 @@ type Props = {
     }
   }
 }
-const EditPost = ( match: Props) => {
+const EditPost = (match: Props): JSX.Element => {
   const user = useAuth0()
   const [title, editTitle] = useState('')
   const [body, editBody] = useState('')
