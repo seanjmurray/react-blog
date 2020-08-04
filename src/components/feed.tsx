@@ -12,7 +12,7 @@ type FeedProps = {
 
 const Feed = ({ posts }: FeedProps): JSX.Element => {
   const feed = posts.map((obj, i) => {
-    if (i < 5) {
+    if (i < 4) {
       return (
         <div className="post" key={i}>
           <h3>{obj.title}</h3>

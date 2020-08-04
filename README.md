@@ -1,5 +1,5 @@
 ## React-Blog
-[![Version](https://img.shields.io/badge/version-2.0.1-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
+[![Version](https://img.shields.io/badge/version-2.0.2-brightgreen.svg)](https://github.com/seanjmurray/react-blog)
 [![Build Status](https://travis-ci.com/seanjmurray/react-blog.svg?branch=master)](https://travis-ci.com/seanjmurray/react-blog)
 
 
@@ -101,6 +101,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
  - 2020-08-01 V 1.3.7 Add moment to format date objects, start refactoring components
  - 2020-08-02 V 2.0.0 Refactor into Typescript, V 2
  - 2020-08-03 V 2.0.1 Refactor admin to typescript
+ - 2020-08-04 V 2.0.2 Change feed to show 4 posts rather than 5
 
  
 ## Credits
